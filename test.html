@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <audio id="bgm" loop>
+        <source src="love.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container" id="mainContainer">
         <h1>你愛我嗎？</h1>
         
         <div class="question-box">
@@ -18,6 +22,15 @@
 
         <button onclick="checkAnswer()">提交答案</button>
     </div>
+
+    <div id="loveTexts"></div>
+
+    <!-- 黑色模式下的「我愛你」按鈕 -->
+    <button id="loveButton" class="love-button" onclick="showFinalScreen()">
+        我愛你
+    </button>
+
+    <div id="finalMessage" class="final-screen"></div>
 
     <script src="script.js"></script>
 </body>
